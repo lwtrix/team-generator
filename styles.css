@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: 0;
+}
+
+body {
+    font-family: Outfit, Inter, sans-serif;
+    background-color: #f6f6c99d;
+}
+
+h1 {
+    color: #153462;
+    font-weight: 700;
+    font-size: 64px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+main {
+    display: flex;
+    background-color: #153462;
+    width: 95vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.list-container {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-between;
+    color: white;
+    margin-right: 50px;
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+    height: 15%;
+}
+
+.add-settings {
+    display: inline-block;
+}
+
+.add-settings .text {
+    font-size: 24px;
+}
+
+.add-settings .input-container {
+    display: flex;
+    margin: 10px 0;
+}
+
+.add-settings .input {
+    border: none;
+    background-color: #4FA095;
+    padding: 0 15px;
+    font-size: 18px;
+    color: white;
+}
+
+.add-settings .input::placeholder {
+    color: rgba(255, 255, 255, 0.438);
+}
+
+.add-settings .add-btn {
+    padding: 10px 30px;
+    border: 0;
+    font-size: 18px;
+    color: #153462;
+    font-family: Outfit;
+    font-weight: 700;
+}
+
+.team-settings {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.team-settings .text {
+    font-size: 24px;
+}
+
+.team-settings .settings-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.team-settings .settings-container .btn {
+    padding: 10px 20px;
+    background-color: #4FA095;
+    border: 0;
+    font-size: 18px;
+    color: white;
+    font-family: Outfit;
+}
+
+.team-settings .settings-container .teams-number {
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.added-members-list {
+    width: 100%;
+    height: 75%;
+    background: #4fa09534;
+    border-top: 10px solid #15346291
+}
+
+.added-members-list .members-list {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.members-list .list-item {
+    font-weight: 100;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.267);
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+.assign-settings {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.assign-settings .assign-btn,
+.assign-settings .reset-btn {
+    padding: 10px 0;
+    font-size: 18px;
+    font-family: Outfit;
+    border: none;
+}
+
+.assign-settings .assign-btn {
+    width: 80%;
+    background-color: #4649FF;
+    color: white;
+}
+
+.assign-settings .reset-btn {
+    width: 19%;
+    background-color: #7878ff5b;
+    color: rgba(255, 255, 255, 0.315);
+    transition: all .3s;
+}
+
+.assign-settings .reset-btn:hover {
+    background-color: #7878ff;
+    color: white;
+}
+
+.team-cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 60%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.team-card {
+    color: rgba(255, 255, 255, 0.794);
+    width: 45%;
+    height: fit-content;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: #4649ff7c;
+    display: block;
+    overflow-y: auto;
+}
+
+.team-card .team-display {
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #4fa09562;
+    padding: 10px 15px;
+}
+
+.team-card .team-members-container {
+    list-style: none;
+    font-weight: 300;
+}
+
+
+.team-members-container .list-item {
+    padding: 5px 15px;
+    text-transform: capitalize;
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.151);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.151);
+}
+
+.team-members-container .list-item:first-child {
+    position: relative;
+    background-color: #13135f5d;
+    text-transform: capitalize;
+}
+
+
+.team-members-container .list-item:first-child::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    background: url('/assets/life-buoy.svg') no-repeat;
+    background-position: center;
+    right: 10%;
+}
+
+.team-members-container .list-item:last-child {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.151);
+}
